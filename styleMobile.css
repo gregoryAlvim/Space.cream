@@ -1,0 +1,164 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --ff-header: 'Staatliches', cursive;
+   --ff-content: 'Palanquin', sans-serif;
+
+   --br-headerPhotos: 2rem;
+
+   --fc-headerPhotos: #4A4E69;
+   --bg-headerPhotos: #FEEAFA;
+
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--ff-content);
+   background: #EFF1FF;
+   min-width: 38rem;
+}
+
+body::before {
+   content: '';
+   min-width: 38rem;
+   width: 100%;
+   height: 310px;
+ 
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background: #8E9AAF;
+ }
+
+header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   height: 280px;
+}
+
+header img {
+   width: 214.47px;
+   height: 167px;
+   margin: auto;
+}
+
+header h1 {
+   width: 100%;
+   padding: 5px 0;
+
+   background: #CBC0D3;
+
+   color: #FFFFFF;
+   font-family: var(--ff-header);
+   text-align: center;
+
+   font-size: 4rem;
+   line-height: 3.4rem;
+   letter-spacing: 0.05em;
+}
+
+header .logoHeader {
+   margin: 4rem auto 3rem;
+}
+
+main {
+   display: grid;
+   gap: 3.2rem;
+   margin-top: 20rem;
+   width: 100%;
+}
+
+.descipition {
+   margin-top: 2rem;
+}
+
+p {
+   width: 80%;
+   font-size: 1.7rem;
+   line-height: 1.5rem;
+
+   text-align: center;
+   margin: 5rem auto 3rem;
+
+   color: #23053A;
+}
+
+main div {
+   width: 80%;
+   margin: auto;
+}
+
+.photos {
+   position: relative;
+}
+
+.photos img {
+   position: relative;
+   width: 100%;
+   border-radius: var(--br-headerPhotos);
+   object-fit: cover;
+
+   animation: downtop 500ms 100ms backwards;
+}
+
+.photos h2 {
+   position: absolute;
+   width: fit-content;
+   font-family: var(--ff-header);
+   
+   color: var(--fc-headerPhotos);
+
+   right: 1rem;
+   top: 1.5rem;
+    
+
+   width: 11.2rem;
+   height: 3.4rem;
+   
+   border-radius: var(--br-headerPhotos);
+
+   background: var(--bg-headerPhotos);
+   text-align: center;
+
+   font-size: 2rem;
+   line-height: 3.4rem;
+   letter-spacing: 0.05em;
+
+   animation: topdown 700ms 400ms backwards;
+}
+
+footer {
+   margin-top: 5rem;
+}
+
+@keyframes topdown {
+   0% {
+     opacity: 0;
+     transform: translateY(-15px);
+   }
+ 
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+@keyframes downtop {
+   0% {
+     opacity: 0;
+     transform: translateY(15px);
+   }
+ 
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+}
+
